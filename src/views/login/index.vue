@@ -105,7 +105,6 @@ import { throttle, lStorage } from '@/utils'
 import { useStorage } from '@vueuse/core'
 import api from './api'
 import { useAuthStore } from '@/store'
-import { initUserAndPermissions } from '@/router'
 
 const authStore = useAuthStore()
 const router = useRouter()
@@ -167,7 +166,6 @@ async function onLoginSuccess(data = {}) {
   authStore.setToken(data)
   $message.loading('登录中...', { key: 'login' })
   try {
-    await initUserAndPermissions()
     $message.success('登录成功', { key: 'login' })
     if (route.query.redirect) {
       const path = route.query.redirect
