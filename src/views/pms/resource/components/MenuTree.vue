@@ -22,6 +22,7 @@
         :show-irrelevant-nodes="false"
         :pattern="pattern"
         :data="treeData"
+        :selected-keys="[currentMenu?.code]"
         :render-prefix="renderPrefix"
         :render-suffix="renderSuffix"
         :on-update:selected-keys="onSelect"

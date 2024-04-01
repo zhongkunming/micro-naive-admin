@@ -202,15 +202,17 @@ async function onSave() {
   await validation()
   okLoading.value = true
   try {
+    let newFormData
     if (!modalForm.value.parentId) modalForm.value.parentId = null
     if (modalAction.value === 'add') {
-      await api.addPermission(modalForm.value)
+      const res = await api.addPermission(modalForm.value)
+      newFormData = res.data
     } else if (modalAction.value === 'edit') {
       await api.savePermission(modalForm.value.id, modalForm.value)
     }
     okLoading.value = false
     $message.success('保存成功')
-    emit('refresh', modalForm.value)
+    emit('refresh', modalAction.value === 'add' ? newFormData : modalForm.value)
   } catch (error) {
     console.error(error)
     okLoading.value = false
