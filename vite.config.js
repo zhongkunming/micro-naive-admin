@@ -14,6 +14,7 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
 import simpleHtmlPlugin from 'vite-plugin-simple-html'
+import removeNoMatch from 'vite-plugin-router-warn'
 import { pluginPagePathes, pluginIcons } from './build/plugin-isme'
 
 export default defineConfig(({ command, mode }) => {
@@ -46,6 +47,8 @@ export default defineConfig(({ command, mode }) => {
       pluginPagePathes(),
       // 自定义插件，用于生成自定义icon，并添加到虚拟模块
       pluginIcons(),
+      // 移除非必要的vue-router动态路由警告: No match found for location with path
+      removeNoMatch(),
     ],
     resolve: {
       alias: {
