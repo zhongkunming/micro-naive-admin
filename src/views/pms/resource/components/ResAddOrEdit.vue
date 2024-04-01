@@ -115,7 +115,7 @@
             <template #unchecked>禁用</template>
           </n-switch>
         </n-form-item-gi>
-        <n-form-item-gi v-if="modalForm.type === 'MENU'" :span="12" path="enable">
+        <n-form-item-gi v-if="modalForm.type === 'MENU'" :span="12" path="keepAlive">
           <template #label>
             <QuestionLabel
               label="KeepAlive"
@@ -184,8 +184,8 @@ const required = {
   trigger: ['blur', 'change'],
 }
 
-const defaultForm = { enable: true, show: true }
-const [modalFormRef, modalForm, validation] = useForm(defaultForm)
+const defaultForm = { enable: true, show: true, layout: '' }
+const [modalFormRef, modalForm, validation] = useForm()
 const [modalRef, okLoading] = useModal()
 
 const modalAction = ref('')
@@ -193,8 +193,8 @@ const parentIdDisabled = ref(false)
 function handleOpen(options = {}) {
   const { action, row = {}, ...rest } = options
   modalAction.value = action
-  modalForm.value = { ...row }
-  parentIdDisabled.value = !!row.parentId
+  modalForm.value = { ...defaultForm, ...row }
+  parentIdDisabled.value = !!row.parentId && row.type === 'BUTTON'
   modalRef.value.open({ ...rest, onOk: onSave })
 }
 
