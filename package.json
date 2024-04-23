@@ -19,14 +19,14 @@
     "pinia": "^2.1.7",
     "pinia-plugin-persistedstate": "^3.2.1",
     "vue": "^3.4.23",
-    "vue-echarts": "^6.6.10",
+    "vue-echarts": "^6.7.0",
     "vue-router": "^4.3.2",
     "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "@iconify/json": "^2.2.203",
     "@iconify/utils": "^2.1.23",
-    "@unocss/eslint-config": "^0.59.4",
+    "@unocss/eslint-config": "^0.58.5",
     "@unocss/preset-rem-to-px": "^0.59.4",
     "@vitejs/plugin-vue": "^5.0.4",
     "@zclzone/eslint-config": "^0.0.5",
