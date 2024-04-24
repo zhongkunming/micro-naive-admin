@@ -10,18 +10,14 @@
   <div>
     <n-tooltip trigger="hover" placement="left">
       <template #trigger>
-        <i class="i-fe:settings cursor-pointer text-32 color-primary" @click="modalRef.open()" />
+        <div class="f-c-c rounded-4 bg-primary p-8" @click="modalRef.open()">
+          <i class="i-fe:settings cursor-pointer bg-white text-20" />
+        </div>
       </template>
       布局设置
     </n-tooltip>
 
-    <MeModal
-      ref="modalRef"
-      title="布局设置"
-      :show-footer="false"
-      width="600px"
-      :modal-style="{ opacity: 0.85 }"
-    >
+    <MeModal ref="modalRef" title="布局设置" :show-footer="false" width="600px">
       <n-space justify="space-between">
         <div class="flex-col cursor-pointer justify-center" @click="appStore.setLayout('simple')">
           <div class="flex">
