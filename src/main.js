@@ -22,10 +22,10 @@ import { setupDirectives } from './directives'
 async function bootstrap() {
   const app = createApp(App)
   setupStore(app)
-  setupNaiveDiscreteApi()
   setupDirectives(app)
   await setupRouter(app)
   app.mount('#app')
+  setupNaiveDiscreteApi()
 }
 
 bootstrap()
