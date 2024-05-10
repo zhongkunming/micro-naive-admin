@@ -52,7 +52,13 @@ Vue Naive Admin 提供一套后端代码，技术栈使用 Nestjs + TypeOrm + My
 
 - 源码-github: [isme-nest-serve | github](https://github.com/zclzone/isme-nest-serve)
 - 源码-gitee: [isme-nest-serve | gitee](https://gitee.com/isme-admin/isme-nest-serve)
+
+
+## 文档
+  
+- 项目文档: [docs | vue-naive-admin](https://docs.isme.top/web/#/624306705/188522224)
 - 接口文档: [apidoc | isme-nest-serve](https://apifox.com/apidoc/shared-ff4a4d32-c0d1-4caf-b0ee-6abc130f734a)
+
 
 ## 版权说明
 
@@ -66,4 +72,10 @@ Vue Naive Admin 提供一套后端代码，技术栈使用 Nestjs + TypeOrm + My
 
 - [isme-java-serve](https://github.com/DHBin/isme-java-serve): 一个轻量级的Java后端服务，基于SpringBoot、MybatisPlus、SaToken、MapStruct等实现，已对接 Vue Naive Admin 2.0。
 - [naive-admin-go](https://github.com/ituserxxx/naive-admin-go): 一个 Go 后端服务，基于 gin、gorm、mysql、jwt和session，已对接 Vue Naive Admin 2.0。
+
+## 入群交流
+
+添加微信，拉你进群
+
+![](https://static.isme.top/image/coder_wx.jpg)
 
