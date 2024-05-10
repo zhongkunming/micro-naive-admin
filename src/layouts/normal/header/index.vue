@@ -34,6 +34,9 @@
         class="i-me:gitee mr-16 cursor-pointer"
         @click="handleLinkClick('https://gitee.com/isme-admin/vue-naive-admin/tree/2.x')"
       />
+
+      <ThemeSetting class="mr-16" />
+
       <UserAvatar />
     </div>
   </AppCard>
@@ -56,4 +59,8 @@ const { isFullscreen, toggle } = useFullscreen()
 function handleLinkClick(link) {
   window.open(link)
 }
+
+watchEffect(() => {
+  appStore.setThemeColor(appStore.primaryColor, appStore.isDark)
+})
 </script>

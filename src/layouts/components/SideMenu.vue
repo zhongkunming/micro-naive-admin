@@ -66,7 +66,7 @@ function handleMenuSelect(key, item) {
       right: 8px;
     }
     &.n-menu-item-content--selected::before {
-      border-left: 4px solid var(--primary-color);
+      border-left: 4px solid rgb(var(--primary-color));
     }
   }
 }

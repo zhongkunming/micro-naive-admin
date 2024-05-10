@@ -68,7 +68,7 @@ body {
       background: #bfbfbf;
     }
     &::-webkit-scrollbar-thumb:hover {
-      background: var(--primary-color);
+      background: rgb(var(--primary-color));
     }
   }
 }

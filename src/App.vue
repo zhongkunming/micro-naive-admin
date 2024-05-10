@@ -29,8 +29,6 @@
 <script setup>
 import { zhCN, dateZhCN, darkTheme } from 'naive-ui'
 import { LayoutSetting } from '@/components'
-import { useCssVar } from '@vueuse/core'
-import { kebabCase } from 'lodash-es'
 import { useAppStore, useTabStore } from '@/store'
 
 const layouts = new Map()
@@ -49,15 +47,6 @@ const Layout = computed(() => {
   if (!route.matched?.length) return null
   return getLayout(route.meta?.layout || appStore.layout)
 })
-
-function setupCssVar() {
-  const common = appStore.naiveThemeOverrides?.common || {}
-  for (const key in common) {
-    useCssVar(`--${kebabCase(key)}`, document.documentElement).value = common[key] || ''
-    if (key === 'primaryColor') window.localStorage.setItem('__THEME_COLOR__', common[key] || '')
-  }
-}
-setupCssVar()
 
 const tabStore = useTabStore()
 const keepAliveNames = computed(() => {

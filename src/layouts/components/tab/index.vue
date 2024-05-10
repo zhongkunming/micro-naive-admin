@@ -11,7 +11,6 @@
     <n-tabs
       :value="tabStore.activeTab"
       :closable="tabStore.tabs.length > 1"
-      :style="`--selected-bg: ${appStore.isDark ? '#1b2429' : '#eaf0f1'}`"
       type="card"
       @close="(path) => tabStore.removeTab(path)"
     >
@@ -38,10 +37,9 @@
 
 <script setup>
 import ContextMenu from './ContextMenu.vue'
-import { useTabStore, useAppStore } from '@/store'
+import { useTabStore } from '@/store'
 
 const router = useRouter()
-const appStore = useAppStore()
 const tabStore = useTabStore()
 
 const contextMenuOption = reactive({
@@ -85,12 +83,12 @@ async function handleContextMenu(e, tagItem) {
     border-radius: 4px !important;
     margin-right: 4px;
     &:hover {
-      border: 1px solid var(--primary-color) !important;
+      border: 1px solid rgb(var(--primary-color)) !important;
     }
   }
   .n-tabs-tab--active {
-    border: 1px solid var(--primary-color) !important;
-    background-color: var(--selected-bg) !important;
+    border: 1px solid rgb(var(--primary-color)) !important;
+    background-color: rgba(var(--primary-color), 0.1) !important;
   }
   .n-tabs-pad,
   .n-tabs-tab-pad,
