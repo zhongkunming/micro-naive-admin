@@ -34,7 +34,7 @@ export const usePermissionStore = defineStore('permission', {
         key: route.name,
         path: route.path,
         originPath: route.meta.originPath,
-        icon: () => h('i', { class: `${route.meta.icon} text-14` }),
+        icon: () => h('i', { class: `${route.meta.icon} text-16` }),
         order: item.order ?? 0,
       }
       const children = item.children?.filter((item) => item.type === 'MENU') || []

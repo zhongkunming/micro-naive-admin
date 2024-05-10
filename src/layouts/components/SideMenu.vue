@@ -59,19 +59,14 @@ function handleMenuSelect(key, item) {
 </script>
 
 <style lang="scss">
-.side-menu {
-  .n-menu-item-content__icon {
-    border: 1px solid rgb(229, 231, 235);
-    border-radius: 4px;
-  }
-  .n-menu-item-content--child-active,
-  .n-menu-item-content--selected {
-    .n-menu-item-content__icon {
-      border-color: var(--primary-color);
-      background-color: var(--primary-color);
-      i {
-        color: #fff;
-      }
+.side-menu:not(.n-menu--collapsed) {
+  .n-menu-item-content {
+    &::before {
+      left: 8px;
+      right: 8px;
+    }
+    &.n-menu-item-content--selected::before {
+      border-left: 4px solid var(--primary-color);
     }
   }
 }
