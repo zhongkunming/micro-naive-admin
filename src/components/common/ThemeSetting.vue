@@ -18,8 +18,4 @@ import { useAppStore } from '@/store'
 const appStore = useAppStore()
 
 const primaryColors = Object.entries(getPresetColors()).map(([, value]) => value.primary)
-
-watchEffect(() => {
-  appStore.setThemeColor(appStore.primaryColor, appStore.isDark)
-})
 </script>

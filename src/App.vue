@@ -52,4 +52,8 @@ const tabStore = useTabStore()
 const keepAliveNames = computed(() => {
   return tabStore.tabs.filter((item) => item.keepAlive).map((item) => item.name)
 })
+
+watchEffect(() => {
+  appStore.setThemeColor(appStore.primaryColor, appStore.isDark)
+})
 </script>
