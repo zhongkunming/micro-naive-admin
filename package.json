@@ -10,7 +10,6 @@
     "lint:fix": "eslint --fix --ext .js,.vue ."
   },
   "dependencies": {
-    "@ant-design/colors": "^7.0.2",
     "@arco-design/color": "^0.4.0",
     "@vueuse/core": "^10.9.0",
     "axios": "^1.6.8",
