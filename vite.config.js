@@ -14,7 +14,6 @@ import Unocss from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
-import simpleHtmlPlugin from 'vite-plugin-simple-html'
 import removeNoMatch from 'vite-plugin-router-warn'
 import { pluginPagePathes, pluginIcons } from './build/plugin-isme'
 
@@ -36,14 +35,6 @@ export default defineConfig(({ command, mode }) => {
       Components({
         resolvers: [NaiveUiResolver()],
         dts: false,
-      }),
-      simpleHtmlPlugin({
-        minify: isBuild,
-        inject: {
-          data: {
-            title: VITE_TITLE,
-          },
-        },
       }),
       // 自定义插件，用于生成页面文件的path，并添加到虚拟模块
       pluginPagePathes(),
