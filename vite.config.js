@@ -17,10 +17,9 @@ import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
 import removeNoMatch from 'vite-plugin-router-warn'
 import { pluginPagePathes, pluginIcons } from './build/plugin-isme'
 
-export default defineConfig(({ command, mode }) => {
-  const isBuild = command === 'build'
+export default defineConfig(({ mode }) => {
   const viteEnv = loadEnv(mode, process.cwd())
-  const { VITE_TITLE, VITE_PUBLIC_PATH, VITE_PROXY_TARGET } = viteEnv
+  const { VITE_PUBLIC_PATH, VITE_PROXY_TARGET } = viteEnv
 
   return {
     base: VITE_PUBLIC_PATH || '/',
