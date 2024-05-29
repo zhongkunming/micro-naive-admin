@@ -51,7 +51,7 @@ const props = defineProps({
     default: true,
   },
   /**
-   * @remote 是否分页
+   * @isPagination 是否分页
    */
   isPagination: {
     type: Boolean,
