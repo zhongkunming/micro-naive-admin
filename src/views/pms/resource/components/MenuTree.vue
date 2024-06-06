@@ -28,8 +28,8 @@
         :on-update:selected-keys="onSelect"
         key-field="code"
         label-field="name"
-
-        block-line default-expand-all
+        default-expand-all
+        block-line
       />
     </n-space>
 
