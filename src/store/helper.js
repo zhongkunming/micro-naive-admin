@@ -22,7 +22,8 @@ export async function getPermissions() {
   try {
     const res = await api.getRolePermissions()
     asyncPermissions = res?.data || []
-  } catch (error) {
+  }
+  catch (error) {
     console.error(error)
   }
   return basePermissions.concat(asyncPermissions)

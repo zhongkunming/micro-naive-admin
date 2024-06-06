@@ -16,6 +16,7 @@
 <script setup>
 import { getPresetColors } from '@arco-design/color'
 import { useAppStore } from '@/store'
+
 const appStore = useAppStore()
 
 const primaryColors = Object.entries(getPresetColors()).map(([, value]) => value.primary)

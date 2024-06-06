@@ -8,7 +8,9 @@
 
 <template>
   <CommonPage show-footer>
-    <n-button type="primary" @click="openModal1">打开第一个弹个窗</n-button>
+    <n-button type="primary" @click="openModal1">
+      打开第一个弹个窗
+    </n-button>
     <MeModal ref="$modal1">
       <n-input v-model:value="text" />
     </MeModal>

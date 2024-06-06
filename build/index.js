@@ -6,8 +6,8 @@
  * Copyright © 2023 Ronnie Zhang(大脸怪) | https://isme.top
  **********************************/
 
+import path from 'node:path'
 import { globSync } from 'glob'
-import path from 'path'
 import dynamicIcons from '../src/assets/icons/dynamic-icons'
 
 /**
@@ -35,5 +35,5 @@ export function getIcons() {
  */
 export function getPagePathes() {
   const files = globSync('src/views/**/*.vue')
-  return files.map((item) => '/' + path.normalize(item).replace(/\\/g, '/'))
+  return files.map(item => `/${path.normalize(item).replace(/\\/g, '/')}`)
 }

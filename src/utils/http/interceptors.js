@@ -20,7 +20,7 @@ export function setupInterceptors(axiosInstance) {
     const { accessToken } = useAuthStore()
     if (accessToken) {
       // token: Bearer + xxx
-      config.headers.Authorization = 'Bearer ' + accessToken
+      config.headers.Authorization = `Bearer ${accessToken}`
     }
 
     return config
@@ -42,7 +42,7 @@ export function setupInterceptors(axiosInstance) {
       // 根据code处理对应的操作，并返回处理后的message
       const message = resolveResError(code, data?.message ?? statusText)
 
-      //需要错误提醒
+      // 需要错误提醒
       !config?.noNeedTip && message && window.$message?.error(message)
       return Promise.reject({ code, message, error: data ?? response })
     }

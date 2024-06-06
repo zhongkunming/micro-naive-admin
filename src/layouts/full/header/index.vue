@@ -41,13 +41,13 @@
 </template>
 
 <script setup>
-import { MenuCollapse, UserAvatar, BreadCrumb } from '@/layouts/components'
+import { useDark, useFullscreen, useToggle } from '@vueuse/core'
+import { BreadCrumb, MenuCollapse, UserAvatar } from '@/layouts/components'
 import { useAppStore } from '@/store'
-import { useDark, useToggle, useFullscreen } from '@vueuse/core'
 
 const appStore = useAppStore()
 const isDark = useDark()
-const toggleDark = () => {
+function toggleDark() {
   appStore.toggleDark()
   useToggle(isDark)()
 }

@@ -49,7 +49,7 @@ const contextMenuOption = reactive({
   currentPath: '',
 })
 
-const handleItemClick = (path) => {
+function handleItemClick(path) {
   tabStore.setActiveTab(path)
   router.push(path)
 }

@@ -18,7 +18,9 @@
       <n-upload-dragger>
         <div class="h-150 f-c-c flex-col">
           <i class="i-mdi:upload mb-12 text-68 color-primary" />
-          <n-text class="text-14 color-gray">点击或者拖动文件到该区域来上传</n-text>
+          <n-text class="text-14 color-gray">
+            点击或者拖动文件到该区域来上传
+          </n-text>
         </div>
       </n-upload-dragger>
     </n-upload>
@@ -31,7 +33,9 @@
               <n-image width="200" :src="item.url" />
             </div>
             <n-space class="mt-16" justify="space-evenly">
-              <n-button dashed type="primary" @click="copy(item.url)">url</n-button>
+              <n-button dashed type="primary" @click="copy(item.url)">
+                url
+              </n-button>
               <n-button dashed type="primary" @click="copy(`![${item.fileName}](${item.url})`)">
                 MD
               </n-button>
@@ -53,6 +57,7 @@
 
 <script setup>
 import { useClipboard } from '@vueuse/core'
+
 defineOptions({ name: 'ImgUpload' })
 
 const { copy, copied } = useClipboard()

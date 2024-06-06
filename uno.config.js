@@ -6,7 +6,7 @@
  * Copyright © 2023 Ronnie Zhang(大脸怪) | https://isme.top
  **********************************/
 
-import { defineConfig, presetUno, presetIcons, presetAttributify } from 'unocss'
+import { defineConfig, presetAttributify, presetIcons, presetUno } from 'unocss'
 import presetRemToPx from '@unocss/preset-rem-to-px'
 import { FileSystemIconLoader } from '@iconify/utils/lib/loader/node-loaders'
 import { getIcons } from './build'
@@ -29,7 +29,7 @@ export default defineConfig({
     }),
     presetRemToPx({ baseFontSize: 4 }),
   ],
-  safelist: icons.map((icon) => `${icon} ${icon}?mask`.split(' ')).flat(),
+  safelist: icons.map(icon => `${icon} ${icon}?mask`.split(' ')).flat(),
   shortcuts: [
     ['wh-full', 'w-full h-full'],
     ['f-c-c', 'flex justify-center items-center'],

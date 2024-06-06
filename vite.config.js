@@ -6,7 +6,7 @@
  * Copyright © 2023 Ronnie Zhang(大脸怪) | https://isme.top
  **********************************/
 
-import path from 'path'
+import path from 'node:path'
 import { defineConfig, loadEnv } from 'vite'
 import Vue from '@vitejs/plugin-vue'
 import VueDevTools from 'vite-plugin-vue-devtools'
@@ -15,7 +15,7 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
 import removeNoMatch from 'vite-plugin-router-warn'
-import { pluginPagePathes, pluginIcons } from './build/plugin-isme'
+import { pluginIcons, pluginPagePathes } from './build/plugin-isme'
 
 export default defineConfig(({ mode }) => {
   const viteEnv = loadEnv(mode, process.cwd())
@@ -56,7 +56,7 @@ export default defineConfig(({ mode }) => {
         '/api': {
           target: VITE_PROXY_TARGET,
           changeOrigin: true,
-          rewrite: (path) => path.replace(new RegExp('^/api'), ''),
+          rewrite: path => path.replace(/^\/api/, ''),
           secure: false,
           configure: (proxy, options) => {
             // 配置此项可在响应头中看到请求的真实地址

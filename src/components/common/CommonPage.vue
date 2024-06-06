@@ -27,8 +27,10 @@
                 <span class="ml-4">返回</span>
               </div>
             </template>
-            <div class="mr-12 h-16 w-4 rounded-l-2 bg-primary"></div>
-            <h2 class="font-normal">{{ title ?? route.meta?.title }}</h2>
+            <div class="mr-12 h-16 w-4 rounded-l-2 bg-primary" />
+            <h2 class="font-normal">
+              {{ title ?? route.meta?.title }}
+            </h2>
             <slot name="title-suffix" />
           </div>
           <slot name="action" />

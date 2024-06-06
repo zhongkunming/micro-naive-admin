@@ -13,7 +13,8 @@ let isConfirming = false
 export function resolveResError(code, message) {
   switch (code) {
     case 401:
-      if (isConfirming) return
+      if (isConfirming)
+        return
       isConfirming = true
       $dialog.confirm({
         title: '提示',
@@ -31,7 +32,8 @@ export function resolveResError(code, message) {
       return false
     case 11007:
     case 11008:
-      if (isConfirming) return
+      if (isConfirming)
+        return
       isConfirming = true
       $dialog.confirm({
         title: '提示',

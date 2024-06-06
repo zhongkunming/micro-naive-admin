@@ -25,7 +25,7 @@
     </form>
   </AppCard>
 
-  <n-data-table
+  <NDataTable
     :remote="remote"
     :loading="loading"
     :scroll-x="scrollX"
@@ -78,10 +78,10 @@ const props = defineProps({
   },
   /**
    * ! 约定接口入参出参
-   * * 分页模式需约定分页接口入参
+   * 分页模式需约定分页接口入参
    *    @pageSize 分页参数：一页展示多少条，默认10
    *    @pageNo   分页参数：页码，默认1
-   * * 需约定接口出参
+   * 需约定接口出参
    *    @pageData 分页模式必须,非分页模式如果没有pageData则取上一层data
    *    @total    分页模式必须，非分页模式如果没有total则取上一层data.length
    */
@@ -111,10 +111,12 @@ async function handleQuery() {
     })
     tableData.value = data?.pageData || data
     pagination.itemCount = data.total ?? data.length
-  } catch (error) {
+  }
+  catch (error) {
     tableData.value = []
     pagination.itemCount = 0
-  } finally {
+  }
+  finally {
     emit('onDataChange', tableData.value)
     loading.value = false
   }
@@ -140,16 +142,17 @@ function onPageChange(currentPage) {
   }
 }
 function onChecked(rowKeys) {
-  if (props.columns.some((item) => item.type === 'selection')) {
+  if (props.columns.some(item => item.type === 'selection')) {
     emit('onChecked', rowKeys)
   }
 }
 function handleExport(columns = props.columns, data = tableData.value) {
-  if (!data?.length) return $message.warning('没有数据')
-  const columnsData = columns.filter((item) => !!item.title && !item.hideInExcel)
-  const thKeys = columnsData.map((item) => item.key)
-  const thData = columnsData.map((item) => item.title)
-  const trData = data.map((item) => thKeys.map((key) => item[key]))
+  if (!data?.length)
+    return $message.warning('没有数据')
+  const columnsData = columns.filter(item => !!item.title && !item.hideInExcel)
+  const thKeys = columnsData.map(item => item.key)
+  const thData = columnsData.map(item => item.title)
+  const trData = data.map(item => thKeys.map(key => item[key]))
   const sheet = utils.aoa_to_sheet([thData, ...trData])
   const workBook = utils.book_new()
   utils.book_append_sheet(workBook, sheet, '数据报表')

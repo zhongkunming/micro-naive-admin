@@ -9,7 +9,9 @@
 <template>
   <CommonPage show-footer>
     <template #title-suffix>
-      <n-tag class="ml-12" type="primary">feather图标集 + isme自定义图标</n-tag>
+      <n-tag class="ml-12" type="primary">
+        feather图标集 + isme自定义图标
+      </n-tag>
     </template>
     <ul class="flex flex-wrap justify-between">
       <li
@@ -18,7 +20,7 @@
         class="m-16 w-160 f-c-c flex-col cursor-pointer rounded-12 px-12 py-24 card-border auto-bg"
         @click="copy(`&lt;i class=&quot;${item}&quot; /&gt;`)"
       >
-        <i :class="item + '?mask'" class="text-28 text-gray-600 hover:bg-primary" />
+        <i :class="`${item}?mask`" class="text-28 text-gray-600 hover:bg-primary" />
         <span
           class="mt-16 text-center text-14 text-gray-400 hover:color-primary"
           @click.stop="copy(item)"
@@ -26,13 +28,13 @@
           {{ item }}
         </span>
       </li>
-      <li class="mx-16 h-0 w-160"></li>
-      <li class="mx-16 h-0 w-160"></li>
-      <li class="mx-16 h-0 w-160"></li>
-      <li class="mx-16 h-0 w-160"></li>
-      <li class="mx-16 h-0 w-160"></li>
-      <li class="mx-16 h-0 w-160"></li>
-      <li class="mx-16 h-0 w-160"></li>
+      <li class="mx-16 h-0 w-160" />
+      <li class="mx-16 h-0 w-160" />
+      <li class="mx-16 h-0 w-160" />
+      <li class="mx-16 h-0 w-160" />
+      <li class="mx-16 h-0 w-160" />
+      <li class="mx-16 h-0 w-160" />
+      <li class="mx-16 h-0 w-160" />
     </ul>
   </CommonPage>
 </template>

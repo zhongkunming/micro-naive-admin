@@ -24,9 +24,9 @@
 </template>
 
 <script setup>
-import { useAppStore } from '@/store'
 import SideBar from './sidebar/index.vue'
 import AppHeader from './header/index.vue'
+import { useAppStore } from '@/store'
 
 const appStore = useAppStore()
 </script>

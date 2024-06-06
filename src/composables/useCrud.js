@@ -6,7 +6,7 @@
  * Copyright © 2023 Ronnie Zhang(大脸怪) | https://isme.top
  **********************************/
 
-import { useModal, useForm } from '.'
+import { useForm, useModal } from '.'
 
 const ACTIONS = {
   view: '查看',
@@ -14,7 +14,7 @@ const ACTIONS = {
   add: '新增',
 }
 
-export const useCrud = ({ name, initForm = {}, doCreate, doDelete, doUpdate, refresh }) => {
+export function useCrud({ name, initForm = {}, doCreate, doDelete, doUpdate, refresh }) {
   const modalAction = ref('')
   const [modalRef, okLoading] = useModal()
   const [modalFormRef, modalForm, validation] = useForm(initForm)
@@ -44,7 +44,8 @@ export const useCrud = ({ name, initForm = {}, doCreate, doDelete, doUpdate, ref
       async onOk() {
         if (typeof onOk === 'function') {
           return await onOk()
-        } else {
+        }
+        else {
           return await handleSave()
         }
       },
@@ -77,7 +78,8 @@ export const useCrud = ({ name, initForm = {}, doCreate, doDelete, doUpdate, ref
       action.cb()
       okLoading.value = false
       data && refresh(data)
-    } catch (error) {
+    }
+    catch (error) {
       okLoading.value = false
       return false
     }
@@ -85,7 +87,8 @@ export const useCrud = ({ name, initForm = {}, doCreate, doDelete, doUpdate, ref
 
   /** 删除 */
   function handleDelete(id, confirmOptions) {
-    if (!id && id !== 0) return
+    if (!id && id !== 0)
+      return
     const d = $dialog.warning({
       content: '确定删除？',
       title: '提示',
@@ -98,7 +101,8 @@ export const useCrud = ({ name, initForm = {}, doCreate, doDelete, doUpdate, ref
           $message.success('删除成功')
           d.loading = false
           refresh(data)
-        } catch (error) {
+        }
+        catch (error) {
           d.loading = false
         }
       },

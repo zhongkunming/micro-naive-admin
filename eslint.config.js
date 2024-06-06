@@ -9,10 +9,13 @@ export default antfu({
     'no-undef': 'error',
     'no-fallthrough': 'off',
     'vue/block-order': 'off',
+    '@typescript-eslint/no-this-alias': 'off',
+    'prefer-promise-reject-errors': 'off',
   },
   languageOptions: {
     globals: {
       h: 'readonly',
+      unref: 'readonly',
       provide: 'readonly',
       inject: 'readonly',
       markRaw: 'readonly',
@@ -21,8 +24,11 @@ export default antfu({
       useRoute: 'readonly',
       useRouter: 'readonly',
       Message: 'readonly',
-      Modal: 'readonly',
-      NProgress: 'readonly',
+      $loadingBar: 'readonly',
+      $message: 'readonly',
+      $dialog: 'readonly',
+      $notification: 'readonly',
+      $modal: 'readonly',
     },
   },
 })

@@ -24,7 +24,9 @@
 
     <template #footer>
       <div class="flex">
-        <n-button class="flex-1" size="large" @click="logout()">退出登录</n-button>
+        <n-button class="flex-1" size="large" @click="logout()">
+          退出登录
+        </n-button>
         <n-button
           :loading="okLoading"
           class="ml-20 flex-1"
@@ -44,7 +46,7 @@
 import api from '@/api'
 import { MeModal } from '@/components'
 import { useModal } from '@/composables'
-import { useUserStore, useAuthStore } from '@/store'
+import { useAuthStore, useUserStore } from '@/store'
 
 const userStore = useUserStore()
 const authStore = useAuthStore()
@@ -67,7 +69,8 @@ async function setCurrentRole() {
     okLoading.value = false
     $message.success('切换成功')
     modalRef.value?.handleOk()
-  } catch (error) {
+  }
+  catch (error) {
     console.error(error)
     okLoading.value = false
     return false
