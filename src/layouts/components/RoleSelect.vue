@@ -50,7 +50,7 @@ const userStore = useUserStore()
 const authStore = useAuthStore()
 
 const roles = ref(userStore.roles || [])
-const roleCode = ref(userStore.currentRole?.code ?? roles[0]?.code ?? '')
+const roleCode = ref(userStore.currentRole?.code ?? roles.value[0]?.code ?? '')
 
 const [modalRef, okLoading] = useModal()
 function open(options) {
