@@ -21,13 +21,14 @@
         </KeepAlive>
       </component>
 
-      <LayoutSetting class="fixed right-12 top-1/2 z-999" />
+      <LayoutSetting v-if="layoutSettingVisible" class="fixed right-12 top-1/2 z-999" />
     </router-view>
   </n-config-provider>
 </template>
 
 <script setup>
 import { darkTheme, dateZhCN, zhCN } from 'naive-ui'
+import { layoutSettingVisible } from './settings'
 import { LayoutSetting } from '@/components'
 import { useAppStore, useTabStore } from '@/store'
 
