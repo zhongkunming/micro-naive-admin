@@ -117,6 +117,10 @@ async function handleQuery() {
     })
     tableData.value = data?.pageData || data
     pagination.itemCount = data.total ?? data.length
+    if (pagination.itemCount && !tableData.value.length && pagination.page > 1) {
+      // 如果当前页数据为空，且总条数不为0，则返回上一页数据
+      onPageChange(pagination.page - 1)
+    }
   }
   catch (error) {
     tableData.value = []
@@ -127,9 +131,14 @@ async function handleQuery() {
     loading.value = false
   }
 }
-function handleSearch() {
-  pagination.page = 1
-  handleQuery()
+
+function handleSearch(keepCurrentPage = false) {
+  if (keepCurrentPage) {
+    handleQuery()
+  }
+  else {
+    onPageChange(1)
+  }
 }
 async function handleReset() {
   const queryItems = { ...props.queryItems }
