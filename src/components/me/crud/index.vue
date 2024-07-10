@@ -9,10 +9,12 @@
 <template>
   <AppCard v-if="$slots.default" bordered bg="#fafafc dark:black" class="mb-30 min-h-60 rounded-4">
     <form class="flex justify-between p-16" @submit.prevent="handleSearch()">
-      <n-space wrap :size="[32, 16]">
-        <slot />
-      </n-space>
-      <div class="flex-shrink-0">
+      <n-scrollbar x-scrollable>
+        <n-space :wrap="!expand || isExpanded" :size="[32, 16]" class="p-10">
+          <slot />
+        </n-space>
+      </n-scrollbar>
+      <div class="flex-shrink-0 p-10">
         <n-button ghost type="primary" @click="handleReset">
           <i class="i-fe:rotate-ccw mr-4" />
           重置
@@ -21,6 +23,17 @@
           <i class="i-fe:search mr-4" />
           搜索
         </n-button>
+
+        <template v-if="expand">
+          <n-button v-if="!isExpanded" type="primary" text @click="toggleExpand">
+            <i class="i-fe:chevrons-down ml-4" />
+            展开
+          </n-button>
+          <n-button v-else text type="primary" @click="toggleExpand">
+            <i class="i-fe:chevrons-up ml-4" />
+            收起
+          </n-button>
+        </template>
       </div>
     </form>
   </AppCard>
@@ -89,6 +102,8 @@ const props = defineProps({
     type: Function,
     required: true,
   },
+  /** 是否支持展开 */
+  expand: Boolean,
 })
 
 const emit = defineEmits(['update:queryItems', 'onChecked', 'onDataChange'])
@@ -102,6 +117,13 @@ const pagination = reactive({
     return `共 ${itemCount} 条数据`
   },
 })
+
+// 是否展开
+const isExpanded = ref(false)
+
+function toggleExpand() {
+  isExpanded.value = !isExpanded.value
+}
 
 async function handleQuery() {
   try {
