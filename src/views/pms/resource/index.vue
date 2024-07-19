@@ -231,6 +231,7 @@ function handleDeleteBtn(id) {
         d.loading = false
       }
       catch (error) {
+        console.error(error)
         d.loading = false
       }
     },
@@ -248,6 +249,7 @@ async function handleEnable(item) {
     item.enableLoading = false
   }
   catch (error) {
+    console.error(error)
     item.enableLoading = false
   }
 }

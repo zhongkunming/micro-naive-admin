@@ -39,6 +39,7 @@ import icons from 'isme:icons'
 const { copy, copied } = useClipboard()
 
 watch(copied, (val) => {
-  val && $message.success('已复制到剪切板')
+  if (val)
+    $message.success('已复制到剪切板')
 })
 </script>

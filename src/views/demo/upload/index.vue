@@ -70,7 +70,8 @@ const imgList = reactive([
 ])
 
 watch(copied, (val) => {
-  val && $message.success('已复制到剪切板')
+  if (val)
+    $message.success('已复制到剪切板')
 })
 
 function onBeforeUpload({ file }) {

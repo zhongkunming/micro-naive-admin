@@ -145,6 +145,7 @@ async function handleQuery() {
     }
   }
   catch (error) {
+    console.error(error)
     tableData.value = []
     pagination.itemCount = 0
   }
