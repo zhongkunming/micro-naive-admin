@@ -28,8 +28,8 @@
         :on-update:selected-keys="onSelect"
         key-field="code"
         label-field="name"
-        default-expand-all
-        block-line
+
+        block-line default-expand-all
       />
     </n-space>
 
@@ -115,6 +115,7 @@ function handleDelete(item) {
         emit('update:currentMenu', null)
       }
       catch (error) {
+        console.error(error)
         $message.destroy('deleteMenu')
       }
     },

@@ -80,6 +80,7 @@ export function useCrud({ name, initForm = {}, doCreate, doDelete, doUpdate, ref
       data && refresh(data)
     }
     catch (error) {
+      console.error(error)
       okLoading.value = false
       return false
     }
@@ -103,6 +104,7 @@ export function useCrud({ name, initForm = {}, doCreate, doDelete, doUpdate, ref
           refresh(data, true)
         }
         catch (error) {
+          console.error(error)
           d.loading = false
         }
       },

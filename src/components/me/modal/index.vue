@@ -144,11 +144,12 @@ async function handleOk(data) {
     // 调用onOk函数，传入data参数
     const res = await modalOptions.value.onOk(data)
     // 如果onOk函数的返回值不为false，则关闭模态框
-    res !== false && close()
+    if (res !== false)
+      close()
   }
   catch (error) {
-    okLoading.value = false
     console.error(error)
+    okLoading.value = false
   }
 }
 
@@ -163,11 +164,12 @@ async function handleCancel(data) {
     const res = await modalOptions.value.onCancel(data)
 
     // 如果onCancel函数的返回值不为false，则关闭模态框
-    res !== false && close()
+    if (res !== false)
+      close()
   }
   catch (error) {
-    okLoading.value = false
     console.error(error)
+    okLoading.value = false
   }
 }
 

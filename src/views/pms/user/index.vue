@@ -279,6 +279,7 @@ async function handleEnable(row) {
     $table.value?.handleSearch()
   }
   catch (error) {
+    console.error(error)
     row.enableLoading = false
   }
 }
