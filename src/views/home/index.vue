@@ -49,7 +49,7 @@
             type="primary"
             ghost
             tag="a"
-            href="https://docs.isme.top/web/#/624306705/188522224"
+            href="https://isme.top"
             target="__blank"
           >
             开发文档
