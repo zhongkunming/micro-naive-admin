@@ -9,9 +9,18 @@
 <template>
   <CommonPage show-footer>
     <template #title-suffix>
-      <n-tag class="ml-12" type="primary">
-        feather图标集 + isme自定义图标
-      </n-tag>
+      <n-tooltip
+        placement="bottom"
+        trigger="hover"
+      >
+        <template #trigger>
+          <a href="https://juejin.cn/post/7394789388154241033" target="_blank" class="ml-12 flex cursor-pointer items-center hover:underline">
+            <i class="i-simple-icons:juejin text-#1E80FF" />
+            <span class="ml-4">Unocss 图标</span>
+          </a>
+        </template>
+        点击查看如何使用 Unocss 图标
+      </n-tooltip>
     </template>
     <ul class="grid grid-cols-[repeat(auto-fill,minmax(160px,1fr))] justify-items-center gap-16">
       <li
