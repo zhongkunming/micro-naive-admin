@@ -21,6 +21,8 @@ export default defineConfig({
       prefix: ['i-'],
       extraProperties: {
         display: 'inline-block',
+        width: '1em',
+        height: '1em',
       },
       collections: {
         me: FileSystemIconLoader('./src/assets/icons/isme'),
