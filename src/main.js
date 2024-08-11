@@ -8,9 +8,9 @@
  * Copyright © 2023 Ronnie Zhang(大脸怪) | https://isme.top
  **********************************/
 
+import 'uno.css'
 import '@/styles/reset.css'
 import '@/styles/global.scss'
-import 'uno.css'
 
 import { createApp } from 'vue'
 import App from './App.vue'
