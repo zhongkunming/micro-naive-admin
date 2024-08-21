@@ -156,7 +156,7 @@ async function handleQuery() {
 }
 
 function handleSearch(keepCurrentPage = false) {
-  if (keepCurrentPage) {
+  if (keepCurrentPage || !props.remote) {
     handleQuery()
   }
   else {
