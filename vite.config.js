@@ -15,6 +15,7 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
 import removeNoMatch from 'vite-plugin-router-warn'
+import VueJsx from '@vitejs/plugin-vue-jsx'
 import { pluginIcons, pluginPagePathes } from './build/plugin-isme'
 
 export default defineConfig(({ mode }) => {
@@ -25,6 +26,7 @@ export default defineConfig(({ mode }) => {
     base: VITE_PUBLIC_PATH || '/',
     plugins: [
       Vue(),
+      VueJsx(),
       VueDevTools(),
       Unocss(),
       AutoImport({

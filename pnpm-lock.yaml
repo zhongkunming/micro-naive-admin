@@ -66,6 +66,9 @@ importers:
       '@vitejs/plugin-vue':
         specifier: ^5.1.2
         version: 5.1.2(vite@5.4.0(sass@1.77.8))(vue@3.4.37(typescript@5.5.4))
+      '@vitejs/plugin-vue-jsx':
+        specifier: ^4.0.1
+        version: 4.0.1(vite@5.4.0(sass@1.77.8))(vue@3.4.37(typescript@5.5.4))
       eslint:
         specifier: ^9.9.0
         version: 9.9.0(jiti@1.21.6)
@@ -1111,6 +1114,13 @@ packages:
     resolution: {integrity: sha512-hP/sL9rq1DvVCbSSx05m+bwYqen1nHm9tW6elKFkfV7X5jBUywu24WRq551NZI33KmgHA525ApX++DSWye+0uw==}
     peerDependencies:
       vite: ^2.9.0 || ^3.0.0-0 || ^4.0.0 || ^5.0.0-0
+
+  '@vitejs/plugin-vue-jsx@4.0.1':
+    resolution: {integrity: sha512-7mg9HFGnFHMEwCdB6AY83cVK4A6sCqnrjFYF4WIlebYAQVVJ/sC/CiTruVdrRlhrFoeZ8rlMxY9wYpPTIRhhAg==}
+    engines: {node: ^18.0.0 || >=20.0.0}
+    peerDependencies:
+      vite: ^5.0.0
+      vue: ^3.0.0
 
   '@vitejs/plugin-vue@5.1.2':
     resolution: {integrity: sha512-nY9IwH12qeiJqumTCLJLE7IiNx7HZ39cbHaysEUd+Myvbz9KAqd2yq+U01Kab1R/H1BmiyM2ShTYlNH32Fzo3A==}
@@ -4369,6 +4379,16 @@ snapshots:
       vite: 5.4.0(sass@1.77.8)
     transitivePeerDependencies:
       - rollup
+      - supports-color
+
+  '@vitejs/plugin-vue-jsx@4.0.1(vite@5.4.0(sass@1.77.8))(vue@3.4.37(typescript@5.5.4))':
+    dependencies:
+      '@babel/core': 7.25.2
+      '@babel/plugin-transform-typescript': 7.25.2(@babel/core@7.25.2)
+      '@vue/babel-plugin-jsx': 1.2.2(@babel/core@7.25.2)
+      vite: 5.4.0(sass@1.77.8)
+      vue: 3.4.37(typescript@5.5.4)
+    transitivePeerDependencies:
       - supports-color
 
   '@vitejs/plugin-vue@5.1.2(vite@5.4.0(sass@1.77.8))(vue@3.4.37(typescript@5.5.4))':
