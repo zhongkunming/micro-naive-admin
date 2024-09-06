@@ -95,10 +95,10 @@
 </template>
 
 <script setup>
-import { NButton, NSwitch } from 'naive-ui'
-import api from './api'
 import { MeCrud, MeModal, MeQueryItem } from '@/components'
 import { useCrud } from '@/composables'
+import { NButton, NSwitch } from 'naive-ui'
+import api from './api'
 
 defineOptions({ name: 'RoleMgt' })
 

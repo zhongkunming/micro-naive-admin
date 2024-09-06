@@ -36,8 +36,8 @@
 </template>
 
 <script setup>
-import ContextMenu from './ContextMenu.vue'
 import { useTabStore } from '@/store'
+import ContextMenu from './ContextMenu.vue'
 
 const router = useRouter()
 const tabStore = useTabStore()

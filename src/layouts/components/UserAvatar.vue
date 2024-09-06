@@ -21,9 +21,9 @@
 </template>
 
 <script setup>
-import { useAuthStore, usePermissionStore, useUserStore } from '@/store'
-import { RoleSelect } from '@/layouts/components'
 import api from '@/api'
+import { RoleSelect } from '@/layouts/components'
+import { useAuthStore, usePermissionStore, useUserStore } from '@/store'
 
 const router = useRouter()
 const userStore = useUserStore()

@@ -6,9 +6,9 @@
  * Copyright © 2023 Ronnie Zhang(大脸怪) | https://isme.top
  **********************************/
 
-import { defineConfig, presetAttributify, presetIcons, presetUno } from 'unocss'
-import presetRemToPx from '@unocss/preset-rem-to-px'
 import { FileSystemIconLoader } from '@iconify/utils/lib/loader/node-loaders'
+import presetRemToPx from '@unocss/preset-rem-to-px'
+import { defineConfig, presetAttributify, presetIcons, presetUno } from 'unocss'
 import { getIcons } from './build/index.js'
 
 const icons = getIcons()

@@ -22,8 +22,8 @@
 
 <script setup>
 import { MeModal } from '@/components'
-import { sleep } from '@/utils'
 import { useModal } from '@/composables'
+import { sleep } from '@/utils'
 
 const text = ref('')
 const [$modal1, okLoading1] = useModal()

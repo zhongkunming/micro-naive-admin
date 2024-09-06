@@ -159,12 +159,12 @@
 </template>
 
 <script setup>
-import pagePathes from 'isme:page-pathes'
-import icons from 'isme:icons'
-import api from '../api'
-import QuestionLabel from './QuestionLabel.vue'
 import { MeModal } from '@/components'
 import { useForm, useModal } from '@/composables'
+import icons from 'isme:icons'
+import pagePathes from 'isme:page-pathes'
+import api from '../api'
+import QuestionLabel from './QuestionLabel.vue'
 
 const props = defineProps({
   menus: {

@@ -6,8 +6,8 @@
  * Copyright © 2023 Ronnie Zhang(大脸怪) | https://isme.top
  **********************************/
 
-import { defineStore } from 'pinia'
 import { usePermissionStore, useRouterStore, useTabStore, useUserStore } from '@/store'
+import { defineStore } from 'pinia'
 
 export const useAuthStore = defineStore('auth', {
   state: () => ({

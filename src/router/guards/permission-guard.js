@@ -6,8 +6,8 @@
  * Copyright © 2023 Ronnie Zhang(大脸怪) | https://isme.top
  **********************************/
 
-import { useAuthStore, usePermissionStore, useUserStore } from '@/store'
 import api from '@/api'
+import { useAuthStore, usePermissionStore, useUserStore } from '@/store'
 import { getPermissions, getUserInfo } from '@/store/helper'
 
 const WHITE_LIST = ['/login', '/404']

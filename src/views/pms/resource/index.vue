@@ -11,7 +11,7 @@
     <div class="flex">
       <n-spin size="small" :show="treeLoading">
         <MenuTree
-          v-model:currentMenu="currentMenu"
+          v-model:current-menu="currentMenu"
           class="w-320 shrink-0"
           :tree-data="treeData"
           @refresh="initData"
@@ -92,11 +92,11 @@
 </template>
 
 <script setup>
+import { MeCrud } from '@/components'
 import { NButton, NSwitch } from 'naive-ui'
+import api from './api'
 import MenuTree from './components/MenuTree.vue'
 import ResAddOrEdit from './components/ResAddOrEdit.vue'
-import api from './api'
-import { MeCrud } from '@/components'
 
 const treeData = ref([])
 const treeLoading = ref(false)

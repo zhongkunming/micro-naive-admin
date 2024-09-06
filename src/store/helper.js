@@ -1,5 +1,5 @@
-import { basePermissions } from '@/settings'
 import api from '@/api'
+import { basePermissions } from '@/settings'
 
 export async function getUserInfo() {
   const res = await api.getUser()

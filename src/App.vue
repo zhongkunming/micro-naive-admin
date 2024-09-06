@@ -29,10 +29,10 @@
 </template>
 
 <script setup>
-import { darkTheme, dateZhCN, zhCN } from 'naive-ui'
-import { layoutSettingVisible } from './settings'
 import { LayoutSetting } from '@/components'
 import { useAppStore, useTabStore } from '@/store'
+import { darkTheme, dateZhCN, zhCN } from 'naive-ui'
+import { layoutSettingVisible } from './settings'
 
 const layouts = new Map()
 function getLayout(name) {

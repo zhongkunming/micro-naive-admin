@@ -105,11 +105,11 @@
 </template>
 
 <script setup>
-import api from './api'
 import { MeModal } from '@/components'
 import { useForm, useModal } from '@/composables'
 import { useUserStore } from '@/store'
 import { getUserInfo } from '@/store/helper'
+import api from './api'
 
 const userStore = useUserStore()
 const required = {

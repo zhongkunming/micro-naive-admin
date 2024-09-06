@@ -101,10 +101,10 @@
 </template>
 
 <script setup>
+import { useAuthStore } from '@/store'
+import { lStorage, throttle } from '@/utils'
 import { useStorage } from '@vueuse/core'
 import api from './api'
-import { lStorage, throttle } from '@/utils'
-import { useAuthStore } from '@/store'
 
 const authStore = useAuthStore()
 const router = useRouter()

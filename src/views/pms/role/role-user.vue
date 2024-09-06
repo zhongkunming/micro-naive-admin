@@ -67,11 +67,11 @@
 </template>
 
 <script setup>
+import { MeCrud, MeQueryItem } from '@/components'
+import { formatDateTime } from '@/utils'
 import { NAvatar, NButton, NSwitch, NTag } from 'naive-ui'
 import { h } from 'vue'
 import api from './api'
-import { MeCrud, MeQueryItem } from '@/components'
-import { formatDateTime } from '@/utils'
 
 defineOptions({ name: 'RoleUser' })
 const route = useRoute()

@@ -8,16 +8,16 @@
  * Copyright © 2023 Ronnie Zhang(大脸怪) | https://isme.top
  **********************************/
 
-import 'uno.css'
-import '@/styles/reset.css'
-import '@/styles/global.scss'
-
 import { createApp } from 'vue'
 import App from './App.vue'
+import { setupDirectives } from './directives'
+
 import { setupRouter } from './router'
 import { setupStore } from './store'
 import { setupNaiveDiscreteApi } from './utils'
-import { setupDirectives } from './directives'
+import '@/styles/global.scss'
+import '@/styles/reset.css'
+import 'uno.css'
 
 async function bootstrap() {
   const app = createApp(App)

@@ -23,8 +23,8 @@
 </template>
 
 <script setup>
-import SideBar from './sidebar/index.vue'
 import { useAppStore } from '@/store'
+import SideBar from './sidebar/index.vue'
 
 const appStore = useAppStore()
 </script>
