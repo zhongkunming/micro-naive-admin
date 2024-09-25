@@ -90,9 +90,6 @@ importers:
       rollup-plugin-visualizer:
         specifier: ^5.12.0
         version: 5.12.0(rollup@4.20.0)
-      sass:
-        specifier: ^1.79.3
-        version: 1.79.3
       simple-git-hooks:
         specifier: ^2.11.1
         version: 2.11.1
@@ -4753,6 +4750,7 @@ snapshots:
   chokidar@4.0.1:
     dependencies:
       readdirp: 4.0.1
+    optional: true
 
   chownr@2.0.0: {}
 
@@ -5498,7 +5496,8 @@ snapshots:
 
   ignore@5.3.2: {}
 
-  immutable@4.3.7: {}
+  immutable@4.3.7:
+    optional: true
 
   import-fresh@3.3.0:
     dependencies:
@@ -6336,7 +6335,8 @@ snapshots:
     dependencies:
       picomatch: 2.3.1
 
-  readdirp@4.0.1: {}
+  readdirp@4.0.1:
+    optional: true
 
   refa@0.12.1:
     dependencies:
@@ -6418,6 +6418,7 @@ snapshots:
       chokidar: 4.0.1
       immutable: 4.3.7
       source-map-js: 1.2.1
+    optional: true
 
   scslre@0.3.0:
     dependencies:

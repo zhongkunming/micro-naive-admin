@@ -59,7 +59,7 @@ function handleMenuSelect(key, item) {
 }
 </script>
 
-<style lang="scss">
+<style>
 .side-menu:not(.n-menu--collapsed) {
   .n-menu-item-content {
     &::before {
