@@ -83,8 +83,6 @@ npx degit zclzone/vue-naive-admin
 - [naive-admin-go](https://github.com/ituserxxx/naive-admin-go): 一个 Go 后端服务，基于 gin、gorm、mysql、jwt和session，已对接 Vue Naive Admin 2.0。
 - [isme-java](https://github.com/AllenDengMs/isme-java): 一个轻量且完成度高的Java后端服务，基于Springboot 3 + JDK21，层次结构严谨，注释齐全，避免过度封装，代码可读性度高，依赖最简化，上手成本低，已集成 账号管理、权限管理、API鉴权、消息国际化等功能。
 
-## 入群交流
+## 联系作者 or 进交流群
 
-添加微信，拉你进群
-
-![](https://static.isme.top/image/coder_wx.jpg)
+[https://www.isme.top/contact.html](https://www.isme.top/contact.html)
