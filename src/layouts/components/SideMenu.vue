@@ -11,6 +11,7 @@
     ref="menu"
     class="side-menu"
     accordion
+    inverted
     :indent="18"
     :collapsed-icon-size="22"
     :collapsed-width="64"

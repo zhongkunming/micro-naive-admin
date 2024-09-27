@@ -16,7 +16,7 @@
   >
     <router-view v-if="Layout" v-slot="{ Component, route: curRoute }">
       <component :is="Layout">
-        <transition name="fade-slide" mode="out-in" appear>
+        <transition name="zoom-fade" mode="out-in" appear>
           <KeepAlive :include="keepAliveNames">
             <component :is="Component" v-if="!tabStore.reloading" :key="curRoute.fullPath" />
           </KeepAlive>
