@@ -6,19 +6,19 @@
  * Copyright © 2023 Ronnie Zhang(大脸怪) | https://isme.top
  **********************************/
 
-export const defaultLayout = 'normal'
+export const defaultLayout = 'full'
 
-export const defaultPrimaryColor = '#316C72'
+export const defaultPrimaryColor = '#2d8cf0'
 
 // 控制 LayoutSetting 组件是否可见
 export const layoutSettingVisible = true
 
 export const naiveThemeOverrides = {
   common: {
-    primaryColor: '#316C72FF',
-    primaryColorHover: '#316C72E3',
-    primaryColorPressed: '#2B4C59FF',
-    primaryColorSuppl: '#316C72E3',
+    // primaryColor: '#316C72FF',
+    // primaryColorHover: '#316C72E3',
+    // primaryColorPressed: '#2B4C59FF',
+    // primaryColorSuppl: '#316C72E3',
   },
 }
 
