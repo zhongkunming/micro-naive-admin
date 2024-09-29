@@ -12,8 +12,7 @@ import { setupInterceptors } from './interceptors'
 
 export function createAxios(options = {}) {
   const defaultOptions = {
-    baseURL: import.meta.env.VITE_AXIOS_BASE_URL,
-    timeout: 12000,
+    timeout: 10000,
   }
   const service = axios.create({
     ...defaultOptions,
@@ -23,7 +22,10 @@ export function createAxios(options = {}) {
   return service
 }
 
-export const request = createAxios()
+export const request = createAxios({
+  baseURL: import.meta.env.VITE_AXIOS_BASE_URL,
+},
+)
 
 export const mockRequest = createAxios({
   baseURL: '/mock-api',

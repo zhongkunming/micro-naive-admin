@@ -7,6 +7,7 @@
  **********************************/
 
 import path from 'node:path'
+import process from 'node:process'
 import Vue from '@vitejs/plugin-vue'
 import VueJsx from '@vitejs/plugin-vue-jsx'
 import Unocss from 'unocss/vite'
